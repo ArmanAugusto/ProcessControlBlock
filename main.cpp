@@ -16,7 +16,8 @@
 #include <cstdlib>
 #include <stdlib.h> // srand, rand
 #include <time.h> // time
-#include <sys/time.h> // for struct timeval
+#include <algorithm> // find()
+#include <string.h>
 #include "PCB.h"
 #include "ReadyQueue.h"
 
@@ -93,10 +94,81 @@ int main(int argc, char** argv) {
      * Test 2
      */
     
-    //std::cout << "\n********TEST 2********\n" << std::endl;
+    std::cout << "\n********TEST 2********\n" << std::endl;
+    
+    srand(time(NULL));
+    int randomNum = 0;
+    int randomPID = 0;
+    
+    time_t T = time(NULL); // "epoch time"
+    printf("%zd\n", T);
+    
+    char tm[100];
+    strcpy(tm, ctime(&T));
+    puts(tm);
+    /* test
+        std::cout << "\nProcesses in the pcb_table:\n" << std::endl;
+        std::cout << " PID\t State\t Priority" << std::endl;
+        for (int i = 0; i < 20; i++) {
+            std::cout << " " << pcb_table[i].PID << "\t"; 
+            std::cout << " " << pcb_table[i].state << "\t";
+            std::cout << " " << pcb_table[i].priority << std::endl;
+        }
+    std::cout << std::endl;
+    */
+    for (int i = 0; i < 10; i++) {
+        randomPID = rand() % 20 + 1; // random PID number from 1 to 20
+        PCB newProcess = pcb_table[randomPID];
+        newProcess.priority = rand() % 50 + 1; // random priority value from 1 to 50    
+        q1.insertProc(newProcess);  
+    }
+    q1.displayQueue();
+    
+    // create a random number between 1 and 100
+    randomNum = rand() % 100 + 1;
+    if ((randomNum % 2) == 0){ // if random number is even
+        // remove highest process
+        q1.removeHighestProc(highestProc);
+    } else {// insert a new random number into the ready queue
+        randomPID = rand() % 20 + 1; // random PID number from 1 to 20
+        PCB newProcess = pcb_table[randomPID];
+        newProcess.priority = rand() % 50 + 1; // random priority value from 1 to 50    
+        q1.insertProc(newProcess);  
+    }
+    q1.displayQueue();
+    
+    /*
+     * randomly decide to remove a process from or add a process to the ready
+     * queue with equal probability (50%) chance
+     */
+    // get a random PID
+    
+    // get a random priority
+    
+    // if
+        // PID and priority do not match what is already in ready queue
+    
+        // insert each value in ready queue
+    
+    // else
+        // remove highest priority from ready queue
+        
     
     
-
+    
+    
+    
+    /*
+     * Remove tests samples
+     */
+    
+    time_t T2 = time(NULL); // "epoch time"
+    printf("%zd\n", T2);
+    
+    char tm2[100];
+    strcpy(tm2, ctime(&T2));
+    puts(tm2);
+    
     return 0;
 }
 
