@@ -1,4 +1,10 @@
 /* 
+ * This program mimics the Process Control Block of an operating system, 
+ * specifically, the behavior of the ReadyQueue that holds the processes
+ * that are ready to be run.
+ */
+
+/* 
  * File:            main.cpp
  * Author:          Arman Augusto
  * Project Name:    Process Control Block
@@ -17,10 +23,6 @@
 
 int main(int argc, char** argv) {
     std::cout << "Name:\t\tArman Augusto" << std::endl;
-    std::cout << "ID:\t\t#004588816" << std::endl;
-    std::cout << "Instructor:\tDr. Xiaoyu Zhang" << std::endl;
-    std::cout << "Course:\t\tCS 433 - Operating Systems" << std::endl;
-    std::cout << "Assignment:\tAssignment 1" << std::endl;
     std::cout << "Date Created:\tSunday, January 30, 2019" << std::endl;
     std::cout << std::endl;
     
