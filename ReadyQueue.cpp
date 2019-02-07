@@ -1,15 +1,9 @@
-/*
- * Project Name:    Process Control Block
- * Description:     This file contains the function definitions and behaviors
- *                  of the ReadyQueue header file.
- */
-
 /* 
  * File:            ReadyQueue.cpp
  * Author:          Arman Augusto
- * ID:              004588816
- * Class:           CS 433 - Operating Systems
- * Assignment:      Assignment 1
+ * Project Name:    Process Control Block
+ * Description:     This file contains the function definitions and behaviors
+ *                  of the ReadyQueue header file.
  *
  * Created on January 30, 2019, 11:29 AM
  */
