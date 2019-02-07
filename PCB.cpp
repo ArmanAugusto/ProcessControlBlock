@@ -1,15 +1,9 @@
-/*
- * Project Name:    Process Control Block
- * Description:     This file contains the function definitions and behaviors
- *                  of the PCB header file.
- */
-
 /* 
  * File:            TestPCB.cpp
  * Author:          Arman Augusto
- * ID:              004588816
- * Class:           CS 433 - Operating Systems
- * Assignment:      Assignment 1
+ * Project Name:    Process Control Block
+ * Description:     This file contains the function definitions and behaviors
+ *                  of the PCB header file.
  *
  * Created on January 30, 2019, 11:10 AM
  */
