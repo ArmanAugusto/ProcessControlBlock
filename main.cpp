@@ -1,9 +1,6 @@
 /* 
  * File:            main.cpp
  * Author:          Arman Augusto
- * ID:              004588816
- * Class:           CS 433 - Operating Systems
- * Assignment:      Assignment 1
  * Project Name:    Process Control Block
  * Description:     This is the main driver file to test the code
  *
